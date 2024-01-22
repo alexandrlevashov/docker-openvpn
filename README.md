@@ -1,3 +1,11 @@
+* Подправленная под свои нужды версия 
+* Основная правка это изменение поведения флага username-as-common-name чтобы при пустом переданном имени (его отсутсвии) CN не перетирался пустым значением.
+* патч отсюда https://community.openvpn.net/openvpn/ticket/58
+* Также взял версию 2.6.8, как пропатчил смотри diff_2.6.8, архив с исходниками исправленными openvpn-2.6.8_al.tar.gz
+* Изменил Dockerfile для сборки из исходников.
+* Собирать docker build -t sccenter/openvpn:v2.6.8_al .
+
+
 # OpenVPN for Docker
 
 [![Build Status](https://travis-ci.org/kylemanna/docker-openvpn.svg)](https://travis-ci.org/kylemanna/docker-openvpn)

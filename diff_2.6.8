@@ -1,0 +1,9 @@
+diff -r o2/openvpn-2.6.8/src/openvpn/ssl_verify.c openvpn-2.6.8/src/openvpn/ssl_verify.c
+1750c1750
+<         if ((session->opt->ssl_flags & SSLF_USERNAME_AS_COMMON_NAME))
+---
+>         if ((session->opt->ssl_flags & SSLF_USERNAME_AS_COMMON_NAME) && (strlen(up->username) > 0) )
+1780c1780
+<             (session->opt->ssl_flags & SSLF_USERNAME_AS_COMMON_NAME) ? "[CN SET]" : "");
+---
+>             ( (session->opt->ssl_flags & SSLF_USERNAME_AS_COMMON_NAME) && (strlen(up->username) > 0) ) ? "[CN SET]" : "");
